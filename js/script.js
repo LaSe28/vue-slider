@@ -3,7 +3,6 @@ const root = new Vue({
     el : '#root',
     data :{
         i : 0,
-        hover : false,
         arrPhotos : [
             {
                 img : '01.jpg',
