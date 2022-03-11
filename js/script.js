@@ -3,6 +3,7 @@ const root = new Vue({
     el : '#root',
     data :{
         i : 0,
+        hover : false,
         arrPhotos : [
             {
                 img : '01.jpg',
@@ -43,9 +44,12 @@ const root = new Vue({
             if(this.i > 0){
                 this.i--
             } else {
-                this.i = this.arrPhotos.length-1
+                this.i = this.arrPhotos.length -1 
             }
-        }
+        },
+    },
+    created(){
+        let myInterval = setInterval(this.incIndex, 3000)
     }
 })
 
