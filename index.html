@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div id="root">
-		<div class="slider">
+		<div @mouseover="stopSlider" @mouseout="startSlider"class="slider">
 			<div class="slide">
 				<img :src="'img/' + arrPhotos[i].img" alt="Svezia">
 				<div class="slide-contents">

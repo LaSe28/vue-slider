@@ -2,6 +2,7 @@
 const root = new Vue({
     el : '#root',
     data :{
+        myInterval: null,
         i : 0,
         arrPhotos : [
             {
@@ -46,9 +47,16 @@ const root = new Vue({
                 this.i = this.arrPhotos.length -1 
             }
         },
+        stopSlider(){
+            clearInterval(this.myInterval)
+        },
+        startSlider(){
+        this.myInterval = setInterval(this.incIndex, 3000)
+        }
+
     },
-    created(){
-        let myInterval = setInterval(this.incIndex, 3000)
+    mounted(){
+        this.startSlider()
     }
 })
 
